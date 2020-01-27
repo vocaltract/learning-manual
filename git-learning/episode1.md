@@ -15,10 +15,10 @@
     键入 git config --global user.email "你注册github的邮箱"
 
 
-## 初始化文件夹
+## 初始化文件夹(optional)
     选择或创建你希望的文件夹，命令行输入git init
     这样就能将该文件夹作为一个本地仓库，从实现对这个文件夹下文件的管理，但并不能起到远端保存代码、防止电脑爆炸后丢失工作项目的功能。
-![](/pictures/1.png)
+![](/pictures/2.png)
 
 ## 创建SSH key
     SSH是一种加密方式，生成并使用这个key能让你的电脑连接上你的github上的远程仓库
@@ -31,7 +31,7 @@
 
 ## 在提示路径下获得你的key
     由于key所在的文件为隐藏文件，要用ls的-a选项来查看
-![](/pictures/4.png)
+    默认地址在
 
     用vim打开.ssh文件中的id_rsa.pub，复制其中所有内容
 
@@ -41,6 +41,7 @@
     在github的setting界面找到
     
 ![](/pictures/7.png)
+    
     点击New SSH Key将刚刚的所有内容键入即可。 
     
 ## 连接github
@@ -69,8 +70,8 @@
 
 ## 使用git
 
-    git add 文件名 将某个文件加入缓冲区，即该文件会被git工具管理的意思。
-    
+    git add 文件名      将某个文件加入缓冲区，即该文件会被git工具管理的意思。
+    若想将所有文件和修改加入缓冲区，则在terminal下键入git add .
 
 [^_^]:
     ![avatar](/pictures/123.png)
