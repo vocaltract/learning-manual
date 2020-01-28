@@ -1,8 +1,12 @@
-# git learning
 
 ## 写在前面
     由于github与git常常一起使用，因此以下教程中会涉及大量github的内容
-    本文适用于linux下，windows下需要下载gitbash，在那个窗口下从“初始化文件夹”开始做起即可。
+    本文适用于linux下，windows下需要下载gitbash，在gitbash中输入对应命令
+    以及，gitbash存在一些设置存放地址的操作，本文不会提及。
+    本文将分章节撰写，每一节的重点会写在前面。
+    由于作者水平较差，各章节耦合度较高，建议从头看起。
+
+# git learning ————github交互相关
 
 ## 注册你的github账号
     这个就不用教了吧，别忘记注册邮箱、用户名以及密码即可。
@@ -13,11 +17,6 @@
 ## 设置用户名与邮箱
     在terminal中键入 git config --global user.name "你的用户名"，建议与github的用户名相同。
     键入 git config --global user.email "你注册github的邮箱"
-
-
-## 初始化文件夹(optional)
-    选择或创建你希望的文件夹，命令行输入git init
-    这样就能将该文件夹作为一个本地仓库，从实现对这个文件夹下文件的管理，但并不能起到远端保存代码、防止电脑爆炸后丢失工作项目的功能。
 
 ## 创建SSH key
     SSH是一种加密方式，生成并使用这个key能让你的电脑连接上你的github上的远程仓库
@@ -51,7 +50,7 @@
     可以在github上新建一个新的repository，再clone到本地。
     以某个repository为例
 
-    将其对应网址https://github.com/vocaltract/learning-manual   加上.git后缀
+    将其对应网址https://github.com/vocaltract/learning-manual加上.git后缀
     在你决定安放文件的地址下，在terminal中键入
     git clone https://github.com/vocaltract/learning-manual.git 当然，你可以clone别的repository
 
