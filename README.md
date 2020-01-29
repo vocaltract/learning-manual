@@ -1,2 +1,2 @@
 # learning-manual
-Here is a personal manual for many things.
+Here is my personal manual for many things, which is based on Ubuntu 18.04
