@@ -54,10 +54,6 @@
     在你决定安放文件的地址下，在terminal中键入
     git clone https://github.com/vocaltract/learning-manual.git 当然，你可以clone别的repository
 
-## 使用git
-
-    git add 文件名      将某个文件加入缓冲区，即该文件会被git工具管理的意思。
-    若想将所有文件和修改加入缓冲区，则在terminal下键入git add .
 
 [^_^]:
     ![avatar](/pictures/123.png)
