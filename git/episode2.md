@@ -32,6 +32,6 @@
     git checkout 分支名
 
 ## 将目标分支合并到当前分支
-    git merge 分支名
+    git merge 目标分支名
 
 ## 
