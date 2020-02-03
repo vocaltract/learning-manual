@@ -30,5 +30,22 @@
 
     本条参考：https://blog.csdn.net/liudsl/article/details/79200134
 
-## 创建新terminal
-    Ctrl+alt+T
+## 创建/关闭terminal
+    Ctrl+alt+T 创建
+    Ctrl+D 或输入exit 关闭 实际上是logout，可以用这个来退出root账户
+
+## 展示时间与日期
+    date
+
+## 展示userid
+    whoami
+
+## 查看最近登录的所有用户
+    who
+
+## 修改密码
+    passwd
+
+## 查看过去用户登录情况
+    last
+    
