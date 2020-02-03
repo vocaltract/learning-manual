@@ -45,11 +45,16 @@
     boot messages就是开机时闪过的内容
 
 ## Chapter7
+### knowledge
     <Ctrl-C>  intr signal 即interrupt
-
-    tty 全称teletype，用于代指terminal
+    A environment variable is an entity with a name and a value, which is always available to the shell and to any programs you may run.
 
 ### tty相关
+    tty 全称teletype，用于代指terminal
     tty     print the file name of the terminal connected to standard input
     stty    设置terminal的相关信息
     getty   to open communication with a terminal and start the login process
+
+### 输出所有环境变量
+    printenv
+
