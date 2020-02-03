@@ -49,3 +49,14 @@
 ## 查看过去用户登录情况
     last
     
+## 切换runlevel
+    sudo init 6 重启
+    sudo init 0 关机
+## 关机
+    sudo shutdown  30秒后关机
+    sudo shutdown now  立刻关机
+## 重启
+    sudo reboot  立刻重启
+
+## 打印工作路径
+    pwd
