@@ -48,13 +48,31 @@
 ### knowledge
     <Ctrl-C>  intr signal 即interrupt
     A environment variable is an entity with a name and a value, which is always available to the shell and to any programs you may run.
+    ^C 等价于 <Ctrl-C>  ^是Ctrl的助记符
+    Alt and Ctrl are called modifier keys
+
+    三种signal erase werase kill
+    erase 删除最后一个字符  <Backspace>或<Delete>或^H
+    werase 删除最后一个词   <Ctrl-W>
+    kill 删除整行   <Ctrl-U>(Ubuntu18.04) 其他上可能是<Ctrl-X>
+
+    ^? is simply a two-character abbreviation that means “whichever key on your keyboard that sends the code that used to be called DEL”.
+    ^\ is mapping to quit signal
+
 
 ### tty相关
     tty 全称teletype，用于代指terminal
     tty     print the file name of the terminal connected to standard input
-    stty    设置terminal的相关信息
+    stty    设置terminal的相关信息  stty -a 查看key mapping 
     getty   to open communication with a terminal and start the login process
 
 ### 输出所有环境变量
     printenv
 
+### ^C的两重用法
+    ^C会发送intr, 即interrupt signal
+    1.可以用来退出程序的运行，但有些程序trap it（捕获它使其失效，如vim）
+    2.可以用来放弃当前command line的输入内容，功能上类似^U发送的kill signal，尽管效果上不相同。
+    因为kill是删除字符，但interrupt是放弃当前命令
+### ^\
+    send quit signal, which is seldom used today.
