@@ -63,7 +63,7 @@
 ### tty相关
     tty 全称teletype，用于代指terminal
     tty     print the file name of the terminal connected to standard input
-    stty    设置terminal的相关信息  stty -a 查看key mapping 
+    stty    设置terminal的相关信息  
     getty   to open communication with a terminal and start the login process
 
 ### 输出所有环境变量
@@ -76,3 +76,32 @@
     因为kill是删除字符，但interrupt是放弃当前命令
 ### ^\
     send quit signal, which is seldom used today.
+
+### ^D
+    send EOF signal
+
+### 防止过多的输出屏幕信息干扰阅读
+    1. less工具 或 cat工具
+    2. ^S sends stop signal.This tells Unix to pause the screen display temporarily. And use ^Q to send
+    start signal to continue.
+
+    题外话： 莫名其妙停了应该按^Q试试
+### 默认高精度计算器
+    bc 跟python3比就是个弟弟。
+
+### stty
+    stty -a 查看key mapping
+    修改key mapping   eg.  stty kill ^A
+
+### return and linefeed
+    linefeed 在过去是将纸上移一行
+    return  在过去是将carriage 移到最左边
+    linefeed is mapping to ^J
+    return is mapping to ^M
+    
+    In general, every line of text must end with a newline(即^J)
+
+    First, as you type, whenever you press<Return>, Unix changes the return into a newline. That is, it changes the ^M into ^J.
+    Second, when data is being written to the terminal, Unix changes each newline to a  return+linefeed. That is, it changes ^J to ^M^J
+
+    第一条是在输入的时候进行转化，第二条是在输出的时候进行转化
