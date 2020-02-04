@@ -105,3 +105,7 @@
     Second, when data is being written to the terminal, Unix changes each newline to a  return+linefeed. That is, it changes ^J to ^M^J
 
     第一条是在输入的时候进行转化，第二条是在输出的时候进行转化
+
+## Chapter8
+
+### 
