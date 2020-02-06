@@ -175,5 +175,106 @@
 
     此外，若系统不支持斜体，则会用下划线代表斜体。
 
+## Chpater12
+### environment
+    As a process runs, it has access to what is called the ENVIRONMENT, a table of
+    variables, each of which is used to hold information.
+### variable
+    When you use a Unix shell, there are two different types of variables. They are called
+    “shell variables” and “environment variables”.
+    
+    You can create them, check their value, change their value, or destroy them.
+    
+    With the shell, however, variables almost always store only one type of data, a
+    CHARACTER STRING, that is, a sequence of plain-text characters
+
+### Parent process and child process
+    When this happens, is called the PARENT PROCESS or PARENT; the second process is the
+    CHILD PROCESS or CHILD. In this case, the parent is the shell and the child is vi.
+    At the time the child process is created, it is given an environment which is a copy of
+    the parent’s environment. We say that the child INHERITS the parent’s environment.
+    This means that all the ENVIRONMENT variables that were accessible to the parent are
+    now accessible to the child.
+
+
+### Bourne shell family
+    处理shell variable和environment variable的方法对于C family 和Bourne family截然不同。
+    以下仅对Bourne family有效
+
+    对于Bourne family，variable可以是shell variable 或 shell and environment variable，但不可以是
+    environment variable
+    Every new variable is automatically a shell variable.
+    The export command changes a shell variable into a shell+environment variable.
+
+### C shell family
+    In the C-Shell family, environment variables are created by the setenv command 
+    and are given uppercase names.
+
+    Shell variables are created by the set command and are given lowercase names.
+
+    There are certain variables that have meaning both within the shell and within
+    all the child processes.The solution is to have a few special shell variables that are tied to
+    environment variables. Whenever one of these variables changes, the shell automatically
+    updates the other one.
+
+Shell Variable | Environment Variable | Meaning
+:-: | :-: | :-:
+cwd | PWD | your current/working directory
+home | HOME | your home directory
+path | PATH | directories to search for programs
+term | TERM | type of terminal you are using
+user | USER | current userid
+
+
+### 查看环境变量
+**printenv | sort | less**
+
+### 查看所有shell variable
+    set指令without options and arguments.
+    Strange but true: The only way to determine which Bourne shell variables are not exported is to
+    compare the output of set to the output of env.
+
+### 查看某个variable
+    echo ${Variable Name} 当不引起歧义时，{}可省略。
+    使用echo时，如果string内部含标点符号，需要用双引号""包裹string，以防标点符号中的metacharacter被解释。
+### 创建variable(Bourne)
+    形如 WCY_NAME=wcy，注意=两侧不可有空格
+    如果value含空格，要用双引号包裹value
+
+    在Bourne family中，每个新创建的变量默认为shell variable
+
+    对于Bourne shell，利用export可以同时创建多个shell and environment变量，语法形如 
+
+export *NAME*[*=value*]...
+
+### 销毁变量(Bourne)
+
+unset *NAME*...
+    
+    The only way to remove a Bourne shell variable from the environment is to destroy it.
+
+### 创建Environment Variable(C)
+
+setenv *NAME* [*value*]
+
+    不指定value会设置为空值
+    用""包裹含空格字符串
+
+### 销毁Environment Variable(C)
+
+unsetenv *NAME*
+
+### 创建Shell Variable(C)
+
+set *name*[*=value*] 
+
+    注意！用()代替""来包裹含空格字符串。
+
+### 销毁Shell Variable(C)
+unset *variable*
+
+### SHELL OPTIONS
+    with the C-Shell family, we control various aspects of the shell’s
+    behavior by using shell variables. With the Bourne shell family, we use SHELL OPTIONS
 
 
