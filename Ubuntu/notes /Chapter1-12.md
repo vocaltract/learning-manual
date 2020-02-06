@@ -277,13 +277,13 @@ unset *variable*
     with the C-Shell family, we control various aspects of the shell’s
     behavior by using shell variables. With the Bourne shell family, we use SHELL OPTIONS
 
-    set option语法为：  
+set option语法为：  
 
 set -o *option*
 
     例如， set -o monitor
 
-    unset option语法为：
+unset option语法为：
 
 set +o *option*
 ### Display Options
