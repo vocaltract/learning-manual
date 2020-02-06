@@ -108,4 +108,72 @@
 
 ## Chapter8
 
-### 
+### which 或 type
+    which 或 type 可以展示工具的路径
+    eg. which vim
+    用来查看在path中是否存在某个program
+
+### 日历
+    cal
+    eg. cal 7 2020 即2020年7月
+    eg. cal 2022 即2022年全年
+    eg. cal -j 7 2020 展示每日为那年的第某天
+
+### 一些没用的玩意儿
+    calendar
+    hostname  展示hostname
+    uptime  展示时间
+    uname 展示OS的名字，加-a获取更多信息
+    whoami 你懂得。
+    users 或who  所有user的name，who提供更多信息
+
+### w 展示详细
+
+## Chapter 9
+    
+### man的使用细节
+    使用man的时候，！相当于vim的：
+    man 一共分为8个部分
+    1. Commands
+    2. System calls
+    3. Library functions
+    4. Special files
+    5. File formats
+    6. Games
+    7. Miscellaneous information
+    8. System administration
+    
+    You may also find that a particular section contains specialized sub-sections. For
+    example, on some Linux systems, if you look within Section 3 (Library functions), you
+    will find several sub-sections: Section 3c, for standard C functions; Section 3f for Fortran
+    functions; Section 3m for mathematical functions; Section 3s for standard I/O functions;
+    and Section 3x for special functions.
+
+
+    man 2 kill 查看section2中的kill
+    man 数字 intro 查看各section的细节
+    man -k name 展示所有section中的name
+    man -f name 用一句话解释所有section中的name
+### foo and bar
+    The idea is that whenever you want to refer to something without a name, you can call
+    it “foo”; when you want to refer to two things without a name, you call them “foo” and
+    “bar”. Nobody knows for sure how this tradition got started, but it is used a lot.
+
+### options
+    single-character options can be combined. eg. -l -F is equivalent to -lF
+    一般来说，顺序是无关紧要的。
+    dash-dash options. 形如--help, --version.用--是为了避免歧义，否则--help可以解释为-h -e -l -p
+
+### options' syntax
+    1. Items in square brackets are optional.
+    2. Items not in square brackets are obligatory.
+    3. Anything in boldface must be typed exactly as written.
+    4. Anything in italics must be replaced by an appropriate value.
+    5. An argument followed by an ellipsis (...) may be repeated any number of times.
+    6. If you see a single option grouped with an argument, the option and argument must be used together.
+    7. Two or more items separated by a | (vertical bar) character, indicates that you are to choose one item from a list.
+
+    此外，若系统不支持斜体，则会用下划线代表斜体。
+
+
+
