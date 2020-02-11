@@ -27,6 +27,7 @@
     apt update                 刷新存储库索引（就是更新与下载包有关的各种信息的意思）
     apt autoremove             自动删除不需要的包
     apt search 包名或正则表达式   在可供下载的包中搜索
+	apt upgrade [package name]
 
     本条参考：https://blog.csdn.net/liudsl/article/details/79200134
 
