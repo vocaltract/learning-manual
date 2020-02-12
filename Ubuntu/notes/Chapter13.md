@@ -45,3 +45,23 @@ fc -s *pattern*=*replacement number*
 
 ## 修改缓存的过去指令数
     export HISTSIZE=你想要的数字
+
+## ls配合正则表达式
+    ls XXX*     展示所有以XXX开头，有0个或更多后缀字母的文件
+    ls XXX?     展示所有以XXX开头，有且仅有一个后缀字母的文件
+
+## 取别名/取消别名
+
+**alias** [*name*=*commands*]
+
+    例如
+    alias lt='ls -l temp*'
+
+    取消别名
+
+**unalias** *name*
+
+    例如
+    unalias lt
+
+    backslash can suspend alias temporarily
