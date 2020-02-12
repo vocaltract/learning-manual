@@ -37,4 +37,11 @@ help [-s] *name*
 ## shell的历史输入
     fc command
     fc -l查看过去的编号
-    fc -s 编号 执行对应语句
+    fc -s 编号 执行对应语句   fc -s 执行上一条语句
+
+    进一步的，有语法
+
+fc -s *pattern*=*replacement number*
+
+## 修改缓存的过去指令数
+    export HISTSIZE=你想要的数字
