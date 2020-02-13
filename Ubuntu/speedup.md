@@ -1,4 +1,5 @@
 # Trying to speed up git
+# 实测没有屁用
 ## 查询所需连接DNS地址
     通过以下查询相关连接DNS网址
 1.    github.com
