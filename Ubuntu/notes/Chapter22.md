@@ -19,3 +19,32 @@
     删除一到五行
 
 ## Cursor moving
+Input | Action 
+:-:|:-:
+0 | move cursor to beginning of current line
+$ | move cursor to end of current line
+^ | move cursor to first non-space/tab in current line
+w | move cursor forward to first character of next word
+e | move cursor forward to last character of current word
+b | move cursor backward to first character of current word
+W | same as w; ignore punctuation
+E | same as e; ignore punctuation
+B | same as b; ignore punctuation
+H | move cursor to top line of screen
+M | move cursor to middle line of screen
+L | move cursor to last line of screen
+
+均支持counting
+
+## Screen moving
+Input | Action
+:-: | :-:
+^F | move down (forward) one screenful
+^B | move up (back) one screenful
+^D | move down a half screenful
+^U | move up a half screenful
+ 
+ 均支持counting
+
+ ## Flexible Cursor moving
+ 
