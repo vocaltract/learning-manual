@@ -9,3 +9,12 @@
 ### Logout File
     commands that are run automatically whenever you log out
 
+## GUI编辑工具
+    gedit     (for Gnome)
+    kedit     (for KDE)
+
+## Initialization files' location
+    Initialization files are kept in your home directory
+
+## Bourne shell
+    Login file runs first.
