@@ -18,5 +18,4 @@
     185.199.108.153  assets-cdn.github.com
     199.232.5.194    github.global.ssl.fastly.net
     
-## 重启网络
-    /etc/init.d/networking restart
+## 重启电脑
