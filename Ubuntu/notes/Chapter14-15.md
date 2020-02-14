@@ -64,4 +64,27 @@
 
 where the *command* is a command, *x* and *y* are file descriptors, and *outputfile* is the name of a file.
 
+    eg.sort 1> output 2>&1 等价于sort > output 2>&1等价于sort 2> output 1>&2
 
+## THROWING AWAY OUTPUT
+    redirect the output and send it to a special file named /dev/null
+
+## pipe
+*command1* 2>&1 | *command2*
+
+    上述命令将stdout 和 stderr都送出去，否则只传送stdout
+
+## SPLITTING A PIPELINE: tee
+
+**tee** [**-a**] *file*...
+
+    eg.cat names1 names2 names3 | tee masterlist | grep Harley
+    masterlist是希望重定向到的文件
+    eg.cat names1 names2 names3 | tee d1 d2 | grep Harley
+    d1 d2得到的内容完全相同。
+
+*command* | tee *file*可以同时展示stdout且重定向到文件。
+
+## Conditional Execution
+
+    && 和 ||
