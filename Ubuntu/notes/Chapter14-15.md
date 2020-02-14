@@ -16,10 +16,10 @@
 ## Initialization files' location
     Initialization files are kept in your home directory
 
-## Bourne shell
-    Login file runs first.
+## Sequence
+    Login file runs first.(Bourne Shell)
 
-##  Redirect
+##  Redirect　(only correct for Bourne Shell)
     The default file descriptors are 0 for standard input,
     1 for standard output, and 2 for standard error.
 
@@ -52,4 +52,16 @@
     When a subshell is created, it inherits the environment of the parent.
     However, any changes the subshell makes to the environment are not passed back to the
     parent.
+
+    Enclosing the commands in parentheses can force the commands to run in a subshell.
+    eg. (date)
+    好处是不用开一个新的shell
+
+## Combined Output(Bourne Shell)
+    redirect both standard output and standard error to the same place
+### syntax
+*command x*> *outputfile y*>&*x*, 
+
+where the *command* is a command, *x* and *y* are file descriptors, and *outputfile* is the name of a file.
+
 
