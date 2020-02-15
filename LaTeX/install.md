@@ -34,6 +34,10 @@
 
     And as the Texlive is quite large, please be patient!
 
+
+## 4. Unmount
+    cd ~ && sudo unmount /mnt
+
 ## 4.Configure the Environment Variable
     cd ~ && vim .profile
     Append the following commands in the .profile
@@ -44,12 +48,28 @@
     export MANPATH=/usr/local/texlive/2019/texmf-dist/doc/man:$MANPATH
     export INFOPATH=/usr/local/texlive/2019/texmf-dist/doc/info:$INFOPATH
 
-## 5. Unmount
-    cd ~ && sudo unmount /mnt
+## 5.Update fonts
+    1.  sudo cp /usr/local/texlive/2019/texmf-var/fonts/conf/texlive-fontconfig.conf /etc/fonts/conf.d/09-texlive.conf
+    
+    2.  reboot your machine. 
+    
+    3.  sudo fc-cache -fsv
 
+    The third step is quite slow, please be patient.
 
-## 6. Test
+## 6.Configure the downloading source and update
+    sudo tlmgr option -repository https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet
+    sudo tlmgr update --self --all
+
+    Sometimes, root account may still not contain the PATH of Texlive, and you will see tlmgr is not found.
+    Alternatively, you can login in the root account, and type
+
+    export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
+    
+    Then tlmgr is available to you.  
+
+## 7. Test
     First, you can type tex --version in the terminal.
-    Second, here is a test tex file in the folder, you can use it with vscode.
+    Second, here is a test tex file in the folder, you can use it with vscode extensions.
 
 
