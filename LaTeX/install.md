@@ -68,8 +68,84 @@
     
     Then tlmgr is available to you.  
 
+    Besides, update is quite slow, too.
+
+## Configure the VScode
+    Install the LaTeX Workshop extension.
+    Invoke the shortcut with Ctrl-Shift-P.
+    Type settings.json and switch into the settings.json file.
+    Substitute the content of the file with the following content.
+
+
+    {
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.autoBuild.onTexChange.enabled": true,
+    "latex-workshop.latex.tools": [
+    {
+    "name": "latexmk",
+    "command": "latexmk",
+    "args": [
+    "-synctex=1",
+    "-interaction=nonstopmode",
+    "-file-line-error",
+    "-pdf",
+    "%DOC%"
+    ]
+    },
+    {
+    "name": "xelatex",
+    "command": "xelatex",
+    "args": [
+    "-synctex=1",
+    "-interaction=nonstopmode",
+    "-file-line-error",
+    "%DOC%"
+    ]
+    },
+    {
+    "name": "pdflatex",
+    "command": "pdflatex",
+    "args": [
+    "-synctex=1",
+    "-interaction=nonstopmode","-file-line-error",
+    "%DOC%"
+    ]
+    },
+    {
+    "name": "bibtex",
+    "command": "bibtex",
+    "args": [
+    "%DOCFILE%"
+    ]
+    }
+    ],
+    "latex-workshop.latex.recipes": [
+    {
+    "name": "xelatex",
+    "tools": [
+    "xelatex"
+    ]
+    },
+    {
+    "name": "latexmk",
+    "tools": [
+    "latexmk"
+    ]
+    },
+    {
+    "name": "pdflatex -> bibtex -> pdflatex*2",
+    "tools": [
+    "pdflatex",
+    "bibtex",
+    "pdflatex",
+    "pdflatex"
+    ]
+    }
+    ],
+    "editor.wordWrap": "bounded"
+    }   
+
+
 ## 7. Test
     First, you can type tex --version in the terminal.
     Second, here is a test tex file in the folder, you can use it with vscode extensions.
-
-
