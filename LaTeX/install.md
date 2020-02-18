@@ -149,3 +149,6 @@
 ## 7. Test
     First, you can type tex --version in the terminal.
     Second, here is a test tex file in the folder, you can use it with vscode extensions.
+
+## Addtional
+    fc-list :lang=zh

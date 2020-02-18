@@ -1,0 +1,271 @@
+\documentclass[c5size,amstex,a4paper,twoside]{ctexart}
+\usepackage{CJK}
+\usepackage{CJKspace}
+\usepackage{ccmap}
+\usepackage{times}
+\usepackage{graphics,booktabs,epsfig,enumerate}
+\usepackage{amsfonts,amssymb,amsmath,amsbsy,bm,paralist,theorem,cite,ifthen,color}
+\usepackage[top=2.2cm, bottom=2.2cm, left=1.91cm, right=1.91cm]{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{longtable}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{graphicx}
+\pagestyle{plain}
+
+\hypersetup{unicode,
+            CJKbookmarks=true,
+            bookmarks=false,                    % show bookmarks bar?
+            bookmarksnumbered=false,
+            bookmarksopen=false,
+            bookmarkstype=toc,
+            unicode=false,                      % non-Latin characters in Acrobat’s bookmarks
+            pdftoolbar=true,                    % show Acrobat’s toolbar?
+            pdfmenubar=true,                    % show Acrobat’s menu?
+            pdffitwindow=true,                  % window fit to page when opened
+            pdfstartview=FitH,                  % fits the width of the page to the window
+            pdftitle={Homework of Signal Processing of Wireless Communication},         % title
+            pdfauthor={Meng Su},              % author
+            pdfsubject={homework},              % subject of the document
+            pdfcreator={Meng Su},             % creator of the document
+            pdfproducer={Latex},                % producer of the document
+            pdfkeywords={HW2,} {Meng Su,} {ishenchao@gmail.com}, % list of keywords
+            pdfnewwindow=true,                  % links in new window
+            colorlinks=true,                    % false: boxed links; true: colored links
+            linkcolor=blue,                      % color of internal links
+            citecolor=green,                    % color of links to bibliography
+            filecolor=magenta,                  % color of file links
+            urlcolor=black                      % color of external links
+}
+
+\CTEXoptions[today=small]
+\CTEXsetup[format+={\flushleft}]{section}
+
+\newcommand{\hei} {\CJKfamily{hei}} % 黑体
+\newcommand{\li}  {\CJKfamily{li}}  % 隶书
+\newcommand{\fs}  {\CJKfamily{fs}}  % 仿宋
+\newcommand{\you} {\CJKfamily{you}} % 幼圆
+\newcommand{\kai} {\CJKfamily{kai}} % 楷体
+\newcommand{\song} {\CJKfamily{song}} % 宋体
+
+
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+~\\[6cm]\rule{\linewidth}{0.5mm} \\[6mm]
+{\Large 实验C1\\\bf\li\huge 电子电荷的确定-密立根油滴实验\\[6mm]}\rule{\linewidth}{0.5mm}\\[2cm]
+{\Large 姓 名: ×\hspace{0.6in}×}\\[.3cm]
+{\Large 学 号:  ××××××}\\[.3cm]
+{\href{mailto:xxxxxxx}{}}  %写论文的邮件地址
+\end{center}
+
+
+\newpage
+
+
+\noindent摘要：密立根油滴实验是物理学发展史上一个具有重要意义的实验，其基本的设计思想是使带电油滴在重力场和电场作用下处于受力平衡状态，通过重力推算电荷数值。本实验通过静态测量法和动态测量法测量电子电荷。实验的原理是利用油滴在重力、空气粘滞阻力下落速率和在重力、空气粘滞阻力和电场力作用下的上升运动来求解电荷量。\\
+关键词：~带电油滴 ~平衡法 ~动态法
+
+\section{测量油滴的电荷量}
+
+\subsection{调整油滴实验仪}
+\subsubsection{水平调整}
+\subsubsection{喷雾器调整}
+\subsubsection{设置实验参数}
+\subsubsection{CCD成像系统调整}
+
+\subsection{选择适当的油滴并练习测量}
+
+\subsubsection{平衡电压的确认}
+\subsubsection{控制油滴的运动}
+\subsubsection{测量下落的时间并记录数据}
+
+\subsection{正式测量}
+正式测量时采用平衡法和动态法两种方法对油滴的电荷量进行测量，每种方法都测试了6个油滴，每个油滴测量了5次。
+\subsubsection{静态法}
+静态法测量油滴时油滴的电荷量计算公式为：
+
+\[q = \frac{18\pi}{\sqrt{2\rho g}} {{\left( \frac{\eta l}{{1 + \frac{b}{pa}}} \right)}}^{3/2} {t_g}^{2/3} \frac{d}{V}.\]
+
+
+实验中记录结果如下：
+\begin{longtable}{| c | c | c | c
+| c | c | c | c |}
+    \hline
+    & \multicolumn{7}{| c |}{ } \\
+    & \multicolumn{7}{| c |}{\textbf{\large 油滴编号}} \\
+    & \multicolumn{7}{| c |}{ } \\
+    \hline
+    & & & & & \\
+      \multicolumn{1}{c|}{\textbf{}}
+    &  \multicolumn{1}{c|}{\textbf{项目}}
+    &  \multicolumn{1}{c|}{\textbf{1}}
+    &  \multicolumn{1}{c|}{\textbf{2}}
+    &  \multicolumn{1}{c|}{\textbf{3}}
+    &  \multicolumn{1}{c|}{\textbf{4}}
+    &  \multicolumn{1}{c|}{\textbf{5}}
+    &  \multicolumn{1}{c|}{\textbf{6}} \\
+    & & & & & & & \\
+     \cline{2-8}
+    & & & & & & &\\
+    \multirow{7}{*}{\begin{sideways}{\textbf{\large 实验结果记录}}\end{sideways}}
+    &   \textbf{平衡电压(V)}   &   $101$      &   $135$      &   $124$      &   $102$    &   $100$    &   $104$   \\
+    & & & & & & &\\
+    \cline{2-8}
+    & & & & & & &\\
+   &   \textbf{第1次下降时间(s)}   &   $1.61$      &   $25.10$      &   $23.28$      &   $24.17$   &   $15.96$    &   $14.10$ \\
+    & & & & & & &\\
+    \cline{2-8}
+    & & & & & & &\\
+   &   \textbf{第2次下降时间(s)}   &   $16.51$      &   $25.00$      &   $23.87$      &   $23.71$   &   $15.71$    &   $14.07$ \\
+    & & & & & & &\\
+    \cline{2-8}
+    & & & & & & &\\
+   &   \textbf{第3次下降时间(s)}   &   $16.37$      &   $25.00$      &   $23.95$      &   $24.26$   &   $15.87$    &   $13.96$ \\
+    & & & & & & &\\
+    \cline{2-8}
+    & & & & & & &\\
+   &   \textbf{第4次下降时间(s)}   &   $16.55$      &   $25.86$      &   $24.70$      &   $23.48$   &   $16.24$    &   $13.71$ \\
+    & & & & & & &\\
+    \cline{2-8}
+    & & & & & & &\\
+   &   \textbf{第5次下降时间(s)}   &   $16.81$      &   $24.80$      &   $23.70$      &   $23.84$   &   $16.16$    &   $13.86$ \\
+    & & & & & & &\\
+    \cline{2-8}
+    & & & & & & &\\
+   &   \textbf{平均下降时间}   &   $16.291$      &   $25.35$      &   $23.92$      &   $23.89$   &   $15.99$    &   $13.94$ \\
+    & & & & & & &\\
+     \cline{2-8}
+    & & & & & & &\\
+    &   \textbf{平均电荷量Q}   &   $1.83e-19$      &   $1.85e-19$      &   $1.93e-19$      &   $1.92e-18$    &   $1.90e-19$    &   $1.78e-19$\\
+    & & & & & & &\\
+    \hline
+    \end{longtable}
+
+
+\subsubsection{动态法}
+
+动态法测量油滴时油滴电荷量的计算公式为:
+
+\[K = \frac{18\pi d}{\sqrt{2\rho g}} {{\left( \frac{\eta l}{{1 + \frac{b}{pa}}} \right)}}^{3/2}.\]
+
+\[q=K(1/t_e+1/t_g)(1/t_g)^{1/2} 1/V\]
+
+
+实验数据及计算结果如下表:
+
+\begin{longtable}{| c | c | c | c
+| c | c | c | c |}
+    \hline
+    & \multicolumn{7}{| c |}{ } \\
+    & \multicolumn{7}{| c |}{\textbf{\large 油滴编号}} \\
+    & \multicolumn{7}{| c |}{ } \\
+    \hline
+    & & & & & \\
+      \multicolumn{1}{c|}{\textbf{}}
+    &  \multicolumn{1}{c|}{\textbf{项目}}
+    &  \multicolumn{1}{c|}{\textbf{1}}
+    &  \multicolumn{1}{c|}{\textbf{2}}
+    &  \multicolumn{1}{c|}{\textbf{3}}
+    &  \multicolumn{1}{c|}{\textbf{4}}
+    &  \multicolumn{1}{c|}{\textbf{5}}
+    &  \multicolumn{1}{c|}{\textbf{6}} \\
+    & & & & & & & \\
+     \cline{2-8}
+    & & & & & & &\\
+    \multirow{7}{*}{\begin{sideways}{\textbf{\large 实验结果记录}}\end{sideways}}
+    &   \textbf{平衡电压(V)}   &   $137$      &   $122$      &   $105$      &   $101$    &   $138$    &   $164$   \\
+    &   \textbf{上升电压(V)}   &   $351$      &   $337$      &   $312$      &   $315$    &   $352$    &   $390$   \\
+    & & & & & & &\\
+    \cline{2-8}
+    & & & & & & &\\
+   &   \textbf{第1次下降时间(s)}   &   $23.49$      &   $14.76$      &   $12.68$      &   $17.70$   &   $14.96$    &   $29.06$ \\
+    & & & & & & &\\
+    \cline{2-8}
+    & & & & & & &\\
+   &   \textbf{第2次下降时间(s)}   &   $24.41$      &   $14.45$      &   $13.00$      &   $17.56$   &   $14.50$    &   $29.69$ \\
+    & & & & & & &\\
+    \cline{2-8}
+    & & & & & & &\\
+   &   \textbf{第3次下降时间(s)}   &   $23.76$      &   $15.20$      &   $12.81$      &   $17.28$   &   $14.06$    &   $30.25$ \\
+    & & & & & & &\\
+    \cline{2-8}
+    & & & & & & &\\
+   &   \textbf{第4次下降时间(s)}   &   $22.71$      &   $14.85$      &   $12.88$      &   $17.64$   &   $14.10$    &   $30.09$ \\
+    & & & & & & &\\
+    \cline{2-8}
+    & & & & & & &\\
+   &   \textbf{第5次下降时间(s)}   &   $23.50$      &   $15.29$      &   $12.84$      &   $17.10$   &   $14.06$    &   $29.21$ \\
+    & & & & & & &\\
+    \cline{2-8}
+    & & & & & & &\\
+   &   \textbf{平均下降时间}   &   $23.547$      &   $14.91$      &   $12.842$      &   $17.456$   &   $14.336$    &   $29.66$ \\
+    & & & & & & &\\
+    \cline{2-8}
+    & & & & & & &\\
+   &   \textbf{第1次上升时间(s)}   &   $19.91$      &   $9.09$      &   $6.71$      &   $8.10$   &   $9.06$    &   $23.50$ \\
+    & & & & & & &\\
+    \cline{2-8}
+    & & & & & & &\\
+   &   \textbf{第2次上升时间(s)}   &   $20.18$      &   $8.80$      &   $6.80$      &   $8.16$   &   $9.31$    &   $23.39$ \\
+    & & & & & & &\\
+    \cline{2-8}
+    & & & & & & &\\
+   &   \textbf{第3次上升时间(s)}   &   $19.80$      &   $8.81$      &   $6.70$      &   $8.09$   &   $9.15$    &   $23.91$ \\
+    & & & & & & &\\
+    \cline{2-8}
+    & & & & & & &\\
+   &   \textbf{第4次上升时间(s)}   &   $20.85$      &   $8.70$      &   $6.76$      &   $8.11$   &   $9.20$    &   $23.70$ \\
+    & & & & & & &\\
+    \cline{2-8}
+    & & & & & & &\\
+   &   \textbf{第5次上升时间(s)}   &   $19.55$      &   $8.79$      &   $26.75$      &   $7.95$   &   $8.90$    &   $23.26$ \\
+    & & & & & & &\\
+    \cline{2-8}
+    & & & & & & &\\
+   &   \textbf{平均上升时间(s)}   &   $20.085$      &   $8.838$      &   $6.744$      &   $8.082$   &   $9.124$    &   $23.552$ \\
+    & & & & & & &\\
+     \cline{2-8}
+    & & & & & & &\\
+    &   \textbf{平均电荷量Q}   &   $1.65e-19$      &   $1.54e-19$      &   $1.75e-19$      &   $1.46e-19$    &   $1.51e-19$    &   $1.76e-19$\\
+    & & & & & & &\\
+    \hline
+    \end{longtable}
+
+    实验结果分析:
+    实验所测得的电荷量与理论值有一定差距，分析实验进行的条件，得到误差产生的来源如下
+    a.由于时间而产生的误差。人的反应时间在0.2秒以上，当下落时间较短时，引起的误差比较大。
+    b.由于热运动的干扰而产生的误差。观察到油滴在平衡时，油滴其实并不是静止不动的，油滴其实是在偏离平衡位置做微小的振动。
+    c.油层引起的误差。当喷油次数过多时，由于在极板上形成油层，导致极板间的场强发生改变，产生实验误差。
+
+    a、b引起的误差可以通过寻找下落时间在30s左右、质量较大的油滴来减小，但是实验中寻找这样的油滴并不容易，从而会产生误差。
+
+\subsection{测量大量油滴的带电量，分析电荷的统计分布规律}
+
+收集的实验数据整理结果如下图:
+
+\includegraphics[width=3.77in,height=2.75in]{C333.jpg}\\
+
+\includegraphics[width=3.77in,height=2.75in]{C222.jpg}
+
+
+从图中可以得出结论Q=ne,除去个别点之外，图形的大致趋势比较符合实际。图像表明电荷数在30以内油滴数量呈现指数衰减的趋势。根据理论，从油管中挤出油滴，油滴数量应该呈现高斯分布，但是在实验中选择的油滴满足了特定要求(降落时间10-40s，平衡电压大于100V等),所以油滴数目大都分布在1-30之间。
+
+\noindent思考题：\\
+(1)本实验如何通过宏观量测量微观量?\\
+本实验利用了微观世界中的量子性效应，把微观量测量转化为宏观量测量，用比较简单的仪器，测得比较精确而稳定的结果.首先测得大量油滴中总的电荷量，再求出单个电子的电荷量。\\
+(2)实验中如何保证油滴做匀速运动？\\
+实验中，油滴在空气中运动受到阻力再加上重力和电场力的作用，在受力平衡时，油滴匀速上 升或下落。为保证油滴在测量时匀速运动，应保证油滴运动足够长一段时间后，做好充分准备后再测量。而在测量时间过程中，可以留意测量距离前半段时间与后半段时间的差值，从而再次保证油滴匀速运动。
+
+
+\begin{thebibliography}{99}
+\emph{基础物理实验},沈韩,电子电荷的确定-密立根油滴实验\\
+\emph{普通物理学},程守洙,江之永
+\end{thebibliography}
+
+\end{document}
