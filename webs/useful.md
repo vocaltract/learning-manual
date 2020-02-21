@@ -10,3 +10,4 @@
 
 ### 1.What‘s Language Representation?
     http://groups.csail.mit.edu/medg/ftp/psz/k-rep.html
+### 2.详解 getopt_long
