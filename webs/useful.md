@@ -11,3 +11,6 @@
 ### 1.What‘s Language Representation?
     http://groups.csail.mit.edu/medg/ftp/psz/k-rep.html
 ### 2.详解 getopt_long
+    https://blog.csdn.net/qq_33850438/article/details/80172275
+### 3.Ubuntu 文件/包的信息查找
+    https://packages.ubuntu.com/
