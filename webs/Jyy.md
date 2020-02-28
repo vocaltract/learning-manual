@@ -1,4 +1,4 @@
-# Here are what JYY recommend
+# Here are what JYY recommends
     原作者：南京大学，蒋炎岩
 
 ## Textbook
