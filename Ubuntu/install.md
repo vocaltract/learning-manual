@@ -146,9 +146,14 @@
     setlocal foldlevel=1 " 设置折叠层数为 1
     nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR> " 用空格键来开关折叠
 
+### 安装并配置tmux
+	sudo apt install tmux
+	cd ~
+	创建一个新文件vim .tmux.conf
+	将下列内容添加进该文件
+	bind-key c new-window -c "#{pane_current_path}"
+	bind-key % split-window -h -c "#{pane_current_path}"
+	bind-key '"' split-window -c "#{pane_current_path}"
 
-
-
-    
     
     参考：https://nju-projectn.github.io/ics-pa-gitbook/ics2019/0.4.html
