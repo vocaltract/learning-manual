@@ -48,16 +48,20 @@
     export MANPATH=/usr/local/texlive/2019/texmf-dist/doc/man:$MANPATH
     export INFOPATH=/usr/local/texlive/2019/texmf-dist/doc/info:$INFOPATH
 
-## 5.Update fonts
-    1.  sudo cp /usr/local/texlive/2019/texmf-var/fonts/conf/texlive-fontconfig.conf /etc/fonts/conf.d/09-texlive.conf
-    
-    2.  reboot your machine. 
-    
-    3.  sudo fc-cache -fsv
+## 5.Get fonts from windows
 
-    The third step is quite slow, please be patient.
+    cd /usr/share/fonts/truetype
+    sudo mkdir myfont
+    cd /usr/share/fonts/opentype
+    sudo mkdir myfont
+    cd /media/你的用户名/0/Windows/Fonts
+    sudo cp *.TTF *.ttf /usr/share/fonts/truetype/myfont
+    sudo cp *.ttc /usr/share/fonts/opentype/myfont
+    可能会提示找不到部分文件，不用担心，查看一下目标文件夹下是否有大部分字体就行 
+    sudo fc-cache -fsv(这一步很慢，要耐心哦)
 
-## 6.Configure the downloading source and update
+## 6.Configure the downloading source and update(optional)
+    This step is quite slow, please be patient.
     sudo tlmgr option -repository https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet
     sudo tlmgr update --self --all
 
@@ -72,8 +76,8 @@
 
 ## Configure the VScode
     Install the LaTeX Workshop extension.
-    Invoke the shortcut with Ctrl-Shift-P.
-    Type settings.json and switch into the settings.json file.
+    Invoke the shortcut Ctrl-Shift-P.
+    Type:    settings.json     and switch into the settings.json file.
     Substitute the content of the file with the following content.
 
 
@@ -148,7 +152,8 @@
 
 ## 7. Test
     First, you can type tex --version in the terminal.
-    Second, here is a test tex file in the folder, you can use it with vscode extensions.
+    Second, here is a test tex file called OS.tex in the folder, you can use it with vscode extensions.
 
 ## Addtional
+    查看系统中有哪些中文字体
     fc-list :lang=zh
