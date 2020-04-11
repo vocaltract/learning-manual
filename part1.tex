@@ -1,0 +1,218 @@
+\documentclass[UTF8]{ctexart}
+%\documentclass[a4paper]{article}
+% \usepackage[margin=1.25in]{geometry}
+\usepackage[inner=2.0cm,outer=2.0cm,top=2.5cm,bottom=2.5cm]{geometry}
+%\usepackage{CJK}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+\newcommand{\homework}[5]{
+    \pagestyle{myheadings}
+    \thispagestyle{plain}
+    \newpage
+    \setcounter{page}{1}
+    \noindent
+    \begin{center}
+    \framebox{
+        \vbox{\vspace{2mm}
+        \hbox to 6.28in { {\bf 智能系统设计与应用 \hfill #2} }
+        \vspace{6mm}
+        \hbox to 6.28in { {\Large \hfill \bf #1 \hfill} }
+        \vspace{6mm}
+        \hbox to 6.28in { {\it 指导老师： {\rm #3} \hfill 姓名： {\rm #4},学号： {\rm #5}}}
+        \vspace{2mm}}
+    }
+    \end{center}
+    % \markboth{#4 -- #1}{#4 -- #1}
+    \vspace*{4mm}
+}
+
+
+\newcommand{\yahei}{\setCJKfamilyfont{yahei}{Microsoft YaHei} \CJKfamily{yahei}}
+
+
+
+
+\newenvironment{solution}
+{\color{blue} \paragraph{Solution.}}
+{\newline \qed}
+
+\begin{document}
+
+
+%大标题在这里改！！！！！！！！！
+\homework{课后练习}{2020 春}{章宗长}{王晨渊}{181220057}
+
+\lstset{numbers=left,numberstyle=\tiny,keywordstyle=\color{blue!70},commentstyle=\color{red!50!green!50!blue!50},frame=shadowbox, rulesepcolor=\color{red!20!green!20!blue!20},escapeinside=``,xleftmargin=2em,xrightmargin=2em, aboveskip=1em}
+
+\section{}
+\subsection{用你自己的话定义下列术语:
+Agent,Agent函数,Agent程
+序,理性,自主,反射Agent,基于模型的Agent,基于目标
+的Agent,基于效用的Agent,学习Agent。}
+
+\subsection{请写出基于目标的Agent和基于效用的Agent的伪代码Agent
+程序。}
+
+\section{}
+\subsection{在火星上,有50\%的概率既有生命又有水,有25\%的概率有
+生命但没有水,有25\%的概率既没有生命又没有水。问:在
+给定有水的前提下,火星上有生命的概率是多少?}
+\begin{solution}
+令事件$A:$火星上有水 $B:$火星上有生命
+
+已知$P(A,B)=0.5,P(\overline{A},B)=0.25,P(\overline{A},\overline{B})=0.25$，求$P(B|A)$
+
+$P(A)=1-P(\overline{A})=1-(P(\overline{A},\overline{B})+P(\overline{A},B))=0.5$
+
+$P(B|A)=\frac{P(A,B)}{P(A)}=1$
+
+所以在给定有水的前提下，火星上有生命的概率为100\%
+\end{solution}
+\subsection{给定一个状态序列为$S_{0:t}$,和观察序列为$O_{0:t}$的隐马尔科夫模型，试证明：}
+
+\begin{equation}
+    P(S_t|O_{0:t})\propto P(O_t|S_t,O_{0:t-1})P(S_t|O_{0:t-1})
+\end{equation}
+
+\textbf{请用上式证明：}
+\begin{equation}
+    P(S_t|O_{0:t})\propto P(O_t|S_t)\sum_{S_{t-1}}P(S_t|S_{t-1})P(S_{t-1}|O_{0:t-1})
+\end{equation}
+
+\begin{solution}
+    
+    $\because P(S_t|O_{0:t})=\frac{P(O_t,S_t|O_{0:t-1})}{P(O_t)} \propto P(O_t,S_t|O_{0:t-1})=P(O_t|S_t,O_{0:t-1})P(S_t|O_{0:t-1})$
+
+    $\therefore P(S_t|O_{0:t})\propto P(O_t|S_t,O_{0:t-1})P(S_t|O_{0:t-1})$
+
+    $\because (O_t\perp O_{0:t-1}|S_t),(S_t\perp O_{0:t-1}|S_{t-1})$
+
+    $\therefore P(O_t|S_t)=P(O_t|S_t,O_{0:t-1})$
+    $,P(S_t|S_{t-1})=P(S_t|S_{t-1},O_{0:t-1})$
+
+    $\therefore P(O_t|S_t,O_{0:t-1})P(S_t|O_{0:t-1})$
+    
+    $=P(O_t|S_t)P(S_t|O_{0:t-1})$
+
+    $=P(O_t|S_t)\sum\limits_{S_{t-1}}P(S_t,S_{t-1}|O_{0:t-1})$
+
+    $=P(O_t|S_t)\sum\limits_{S_{t-1}}P(S_t|S_{t-1},O_{0:t-1})P(S_{t-1}|O_{0:t-1})$
+
+    $=P(O_t|S_t)\sum\limits_{S_{t-1}}P(S_t|S_{t-1})P(S_{t-1}|O_{0:t-1})$
+
+    $\therefore P(S_t|O_{0:t})\propto P(O_t|S_t)\sum_{S_{t-1}}P(S_t|S_{t-1})P(S_{t-1}|O_{0:t-1})$
+\end{solution}
+
+
+
+
+
+
+\subsection{什么是分类任务?朴素贝叶斯模型使用了什么假设?使用盘式记法来画一个朴素的贝叶斯模型。}
+\begin{solution}
+    分类任务是指从给定的一组观察或特征中推断样本所属的类别。
+
+    朴素贝叶斯的假设是：给定所属的类别，所有证据变量之间彼此条件独立。
+
+    模型如图（用PPT画的）
+\end{solution}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.4]{bayes.jpg}%还有
+    \caption{简单的朴素贝叶斯模型}
+\end{figure}
+
+\subsection{有一位教授想知道学生是否睡眠充足。每天,教授观察学生
+在课堂上是否睡觉,并观察他们是否红眼。教授有如下的领
+域理论:}
+\begin{enumerate}[1)]
+    \item 没有观察数据时,学生睡眠充足的先验概率为0.7。
+    \item 给定学生前一天睡眠充足为条件,学生在晚上睡眠充足的概率是0.8;
+    如果前一天睡眠不充足,则是0.3。
+    \item 如果学生睡眠充足,则红眼的概率是0.2,否则是0.7。
+    \item 如果学生睡眠充足,则在课堂上睡觉的概率是0.1,否则是0.3。
+\end{enumerate}
+\phantom{空格}\textbf{将这些信息形式化为一个动态贝叶斯网络,使教授可以使用
+这个网络从观察序列中进行滤波和预测。然后再将其形式化
+为一个只有一个观察变量的隐马尔科夫模型。给出这个模型
+的完整的概率表。}
+
+\subsection{对于上一道练习描述的动态贝叶斯网络以及证据变量值}
+\begin{enumerate}[1)]
+    \item $O_0:$没有红眼,没有在课堂上睡觉
+    \item $O_1:$有红眼,没有在课堂上睡
+    \item $O_2:$有红眼,在课堂上睡
+\end{enumerate}
+\textbf{执行下面的计算：}
+\begin{enumerate}[a)]
+    \item 状态估计：针对每个$t = 0, 1, 2$，计算$P(EnoughSleep_t|O_{0:t})$
+    \item 平滑：针对每个$t = 0, 1, 2$，计算$P(EnoughSleep_t|O_{0:2})$
+    \item 针对$t=0$和$t=1$，比较滤波概率和平滑概率
+\end{enumerate}
+\begin{solution}
+    根据我对于本题目的理解，我认为今天是否红眼或课上睡觉仅与前一天晚上的睡眠有关。
+
+
+    令$S_t=\mathbf{I}\{$学生在第$t$天晚上睡眠充足$\},R_t=\mathbf{I}\{$学生在第$t+1$天红眼$\},A_t=\mathbf{I}\{$学生在第$t+1$天的课上睡觉$\}$
+    ，其中$\mathbf{I}$为指示函数。
+
+    值得注意的是，我的定义中特地调整了一天使其更吻合我们通常的模式。
+
+    由于定义的问题，我觉得自己的答案可能会与其他人不太一样，求老师能仔细看下。 
+
+    已知$P(S_1=1)=0.7,P(S_t=1|S_{t-1}=1)=0.8,P(S_t=1|S_{t-1}=0)=0.3$
+
+    $P(R_t=1|S_{t}=1)=0.2,P(R_t=1|S_{t}=0)=0.7$
+
+    $P(A_t=1|S_{t}=1)=0.1,P(A_t=1|S_{t}=0)=0.3$
+
+    其对应的动态贝叶斯网络图如下（PPT画的）
+
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[scale=0.2]{init.png}%还有
+        \caption{简单的朴素贝叶斯模型}
+    \end{figure}
+
+
+
+    令随机变量$O_t$有如下性质
+
+    \[ 
+    O_t= 
+    \begin{cases}
+        0 &  R_t=0 \wedge A_t=0\\ 
+        
+        1 & R_t=1 \wedge A_t=1\\
+        
+        2 &  R_t=0 \wedge A_t=1\\
+
+        3 & R_t=1 \wedge A_t=0\\
+    \end{cases} 
+    \] 
+
+    从而我们将其转化为隐马尔科夫模型如下
+
+
+
+    其完整概率表为
+
+
+Q
+\end{solution}
+
+
+\end{document}
